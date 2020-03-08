@@ -1,0 +1,7 @@
+symfony console doctrine:migrations:migrate --no-interaction
+
+pour acceder au repository :  $pins = $em->getRepository(App:Pin)
+EntityManagerInterface a passer en paramtere : ma_methode (EntityManagerInterface $em) => use Doctrine\ORM\EntityManagerInterface;
+Pour utliser directement le repository : use App\Repository\ClientRepository => mettre en parametre de la methode : ClientRepository $rep
+
+Redirection vers une route => $this->redirectToRoute('about');

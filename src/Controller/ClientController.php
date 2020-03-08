@@ -23,7 +23,7 @@ class ClientController extends AbstractController
     	$em->flush();*/
     	//$rep = $em->getRepository(Client::class);
     	$clients = $rep->findAll();
-        return $this->render('flash/home.html.twig', [
+        return $this->render('client/test.html.twig', [
             'controller_name' => 'ClientController',
             'clients' => $clients
         ]);
