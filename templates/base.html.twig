@@ -3,10 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+                    <link rel="stylesheet" href="{{ asset('bundles/mercuryseriesflashy/css/flashy.css') }}">{% endblock %}
+
+
+
+    <!-- Load Flashy default JavaScript -->
+
+</head>
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+    <!-- Flashy depends on jQuery -->
+    <script src="//code.jquery.com/jquery.js"></script>
+                <script src="{{ asset('bundles/mercuryseriesflashy/js/flashy.js') }}"></script>
+        {% endblock %}
+        {{ include('@MercurySeriesFlashy/flashy.html.twig') }}
+
     </body>
 </html>
